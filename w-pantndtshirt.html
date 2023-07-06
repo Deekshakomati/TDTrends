@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            outline: 0px;
+        }
+        .header{
+            width: 100%;
+            height: 10vh;
+            background-color: bisque;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        .t1{
+            display: flex;
+            width: 20%;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        .d1{
+            width: 120%;
+            height: 30px;
+        }
+        .t2{
+            display: flex;
+            width: 30%;
+            height: 100%;
+            align-items: center;
+            justify-content:space-around;
+            font-size: 20px;
+            position: relative;
+        }
+        .t2 i{
+            color: black;
+        }
+        .line1{
+            width: 10%;
+            height: 50%;
+            background-color:green;
+        }
+        .head1{
+            width:100%;
+            height: 10vh;
+            background-color: rgb(25, 159, 159);
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+        }
+        .H1{
+            display: flex;
+            width: 20%;
+            align-items:center;
+            justify-content: space-around;
+            font-size: 20px;
+        }
+        .H1 a{
+            color: black;
+        }
+        .line1{
+            width: 1px;
+            height:20px;
+            
+            background-color: black;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color:white;
+            display: none;
+           align-items: start;
+           border-radius: 20px;
+           box-shadow: 0px 0px 10px 3px rgb(229, 218, 218);
+           justify-content: space-around;
+           flex-direction: column;
+            position: absolute;
+            z-index: 10;
+            left: 40%;
+            top: 17%;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color:white;
+            display: none;
+           align-items: start;
+           border-radius: 20px;
+           box-shadow: 0px 0px 10px 3px rgb(229, 218, 218);
+           justify-content: space-around;
+           flex-direction: column;
+            position: absolute;
+            z-index: 10;
+            left: 45%;
+            top: 17%;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color:white;
+            display: none;
+           align-items: start;
+           border-radius: 20px;
+           box-shadow: 0px 0px 10px 3px rgb(229, 218, 218);
+           justify-content: space-around;
+           flex-direction: column;
+            position: absolute;
+            z-index: 10;
+            left: 50%;
+            top: 17%;
+        }
+        .con1{
+            width: 100%;
+            height: 220vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: black;
+        }
+         .con{
+            grid-template-columns: 1fr 1fr ;
+           
+           height: 200vh;
+            width: 60%;
+            margin: auto;
+            gap: 10px;
+            display: grid;
+        }
+        .c1{
+           display: flex;
+           align-items: center;
+           justify-content: space-around;
+            background-color: whitesmoke;
+            flex-direction: column;
+            border-radius: 20px;
+        }
+        .c1:hover{
+            box-shadow: 0px 0px 3px 3px rgb(201, 195, 195)
+        }
+        .img{
+            width: 80%;
+            height: 70%;
+            background-image: url(w-tshirt1.jpg);
+            align-items: start;
+           justify-content: end;
+           color: red;
+            background-size: 100% 100%;
+        }
+        .c2{
+            display: flex;
+           align-items: center;
+           justify-content: space-around;
+            background-color: whitesmoke;
+            flex-direction: column;
+            border-radius: 20px;    
+        }
+        .c2:hover{
+            box-shadow: 0px 0px 3px 3px rgb(201, 195, 195);
+        }
+        .img1{
+            width: 80%;
+            height: 70%;
+            background-image: url(w-tshirt2.jpg);
+            align-items: start;
+           justify-content: end;
+           color: red;
+            background-size: 100% 100%;
+        }
+        .c3{
+            display: flex;
+           align-items: center;
+           justify-content: space-around;
+            background-color: whitesmoke;
+            flex-direction: column;
+            border-radius: 20px;
+        }
+        .c3:hover{
+            box-shadow: 0px 0px 3px 3px rgb(201, 195, 195);
+        }
+        .img2{
+            width: 80%;
+            height: 70%;
+            background-image: url(w-tshirt3.jpg);
+            align-items: start;
+           justify-content: end;
+           color: red;
+            background-size: 100% 100%;
+        }
+        .c4{
+            
+            display: flex;
+           align-items: center;
+           justify-content: space-around;
+            background-color: whitesmoke;
+            flex-direction: column;
+            border-radius: 20px;
+        }
+        .c4:hover{
+            box-shadow: 0px 0px 3px 3px rgb(201, 195, 195);
+        }
+        .img3{
+            width: 80%;
+            height: 70%;
+            background-image: url(w-pant1.jpg);
+            align-items: start;
+           justify-content: end;
+           color: red;
+            background-size: 100% 100%;
+        }
+        .c5{
+           
+            display: flex;
+           align-items: center;
+           justify-content: space-around;
+            background-color: whitesmoke;
+            flex-direction: column;
+            border-radius: 20px;
+        }
+        .c5:hover{
+            box-shadow: 0px 0px 3px 3px rgb(201, 195, 195);
+        }
+        .img4{
+            width: 80%;
+            height: 70%;
+            background-image: url(w-pant2.webp);
+            align-items: start;
+           justify-content: end;
+           color: red;
+            background-size: 100% 100%;
+        }
+        .c6{
+           
+            display: flex;
+           align-items: center;
+           justify-content: space-around;
+            background-color: whitesmoke;
+            flex-direction: column;
+            border-radius: 20px;
+        }
+        .c6:hover{
+            box-shadow: 0px 0px 3px 3px rgb(201, 195, 195);
+        }
+        .img5{
+            width: 80%;
+            height: 70%;
+            background-image: url(w-pant3.jpg);
+            align-items: start;
+           justify-content: end;
+           color: red;
+            background-size: 100% 100%;
+        }
+        .sale{
+    width: 100%;
+    height: 50vh;
+  
+    display:flex;
+    background-color: powderblue;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: rgb(234, 20, 20);
+    font-family:cursive ;font-weight: 700;
+}
+.btn4{
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: blanchedalmond;
+}
+.border{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+.border2{
+    width:70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;   
+}
+.border2 a{
+    color: black;
+}
+.border1{
+    width: 40%;
+    height: 50%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.line{
+    width: 100%;
+    height: 1px;
+   
+    background-color: black;
+}
+.terms{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} 
+.terms1{
+    width: 95%;
+    height: 85%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.cust{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;    
+}
+.cust a{
+    color: black;
+}
+.Keep{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.keep1{
+    width: 80%;
+    height: 20%;
+
+    display: flex;
+    justify-content: space-between;
+}
+input{
+    width: 280px;
+    height: 50%;    
+}
+.keep2{
+    width: 20%;
+    height: 50%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+.font{
+    font-size: 40px;
+   width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.insta{
+    transition: all 2s;
+}
+.insta:hover{
+    transform: rotate(360deg);
+}
+.fb{
+    transition: all 2s;
+}
+.fb:hover{
+    transform: rotate(360deg);
+}
+.yt{
+    transition: all 2s;
+}
+.yt:hover{
+    transform: rotate(360deg);
+}
+.line2{
+    width: 100%;
+    height: 1px;
+    
+    background-color: black;
+}
+.iconlogin{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 8%;
+    font-size: 135%;
+    align-items: center;
+}
+.iconlogin button{
+    background: none;
+    border: none;
+    font-size: 18px;
+}
+
+.modal input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+  }
+  .icon button {
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 100%;
+  }
+  .container button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 80%;
+    border-radius: 25px;
+    padding: 2%;
+  }
+  .container a{
+      text-decoration: none;
+      color: #ffffff;
+  }
+  .container button:hover {
+    background-color: #db0000;
+  }
+  .imgcontainer {
+    text-align: center;
+    margin: 12px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 50%;
+    height: 25vh;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 4%;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    height: 40vh;
+    position: relative;
+    /* top: 25vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  .modal {
+    display: none;
+    position: fixed; 
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: fixed;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+
+  .modal-content {
+    background-color: #ffffff;
+    margin: 2% auto 5% auto;
+    box-shadow:0px 0px 20px 0px #525252;
+    border-bottom:2px solid #db0000;
+    border-radius: 10px;
+    padding: 2%;
+    width: 30%;
+    height: 80%; 
+  }
+  .close {
+    position: absolute;
+    right: 10px;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold
+  }
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+  }
+
+    </style>
+</head>
+<body>
+    <nav class="header">
+        <div class="t1">
+            <div><i class="fa-brands fa-firstdraft"></i></div>&nbsp;
+            <div class="line1"></div>&nbsp;
+            <div>TD Trends</div>
+        </div>
+        <div class="t2">
+            <div>
+                <input type="text"placeholder="search" class="d1"/>
+            </div>
+            <a href=" "><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href=" "><i class="fa-regular fa-heart"></i></a>
+            <a href=" "><i class="fa-solid fa-location-dot"></i></a>
+            <!-- <a href=" "><i class="fa-solid fa-user"></i></a> -->
+            <a href=" "><i class="fa-solid fa-bag-shopping"></i></a>
+            <div class="iconlogin">
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa-solid fa-user"></i></button>
+                <div id="id01" class="modal">
+                    <form class="modal-content animate" action="/action_page.php" method="post">
+                      <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <img src="https://cdn.dribbble.com/users/398490/screenshots/1716348/users.gif" alt="Avatar" class="avatar">
+                      </div>
+                  
+                      <div class="container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+                        
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                         
+                        <button type="submit">Login</button>
+                        <div><center>or</center></div>
+                        <button><a href="">Signup</a></button>
+                      </div>
+                      
+                    </form>
+                  </div>
+            </div>
+            </div>
+            <script>
+            var modal = document.getElementById('id01');
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+            </script>
+
+
+        </div>
+    </nav>
+    <div class="head1">
+        <div class="H1">
+           <div class="H12" onclick="men()" ondblclick="men1()"> <a href="# ">Men</a></div>
+           <div class="H13" onclick="women()" ondblclick="women1()"> <a href="# ">women</a></div>
+           <div class="H14" onclick="kids()" ondblclick="kids1()"> <a href="# ">kids</a></div>
+           <div class="H15" onclick="sale()" ondblclick="sale1()"> <a href="./Sale.html">Sale</a></div>
+            <!-- <a href=" ">Women</a>
+            <a href=" ">Kids</a>
+            <a href=" ">Sale</a> -->
+        </div> 
+    </div>
+    <div class="box">
+        <div><a href="./mshirt.html">Shirt</a></div>
+        <div><a href="./mpant.html">Pants</a></div>
+        <div><a href="./m t shirt.html"target="_blank"   > T shirts</a> </div>
+    </div>
+    <div class="box1">
+        <div><a href="./w-saree.html">Sarees</a></div>
+        <div><a href="./w-dress.html">Dresses</a></div>
+        <div><a href="./w-pantndtshirt.html"target="_blank">pants and T shirts</a> </div>
+    </div>
+    <div class="box2">
+        <div><a href="./boy.html"target="_blank">Boys</a></div>
+        <div><a href="./girls.html"target="_blank">Girls</a></div>
+    </div>  
+    <div class="con1">
+    <div class="con">
+        <div class="c1">
+            <div class="img"><a href=""><i class="fa-regular fa-heart"></i></a></div>
+            <div class="price">price: $500</div>
+            <div class="Size">Free Size</div>
+            <button>add to cart</button>
+        </div>
+        <div class="c2">
+            <div class="img1"><a href=""><i class="fa-regular fa-heart"></i></a></div>
+            <div class="price">price: $300</div>
+            <div class="Size">Free Size</div>
+            <button>Add to Cart</button>
+        </div>
+        <div class="c3">
+            <div class="img2"><a href=""><i class="fa-regular fa-heart"></i></a></div>
+            <div class="price">price: $850</div>
+            <div class="Size">Free Size</div>
+            <button>Add to Cart</button>
+        </div>
+        <div class="c4">
+            <div class="img3"><a href=""><i class="fa-regular fa-heart"></i></a></div>
+            <div class="price">price: $700</div>
+            <div class="Size">Free Size</div>
+            <button>Add to Cart</button>
+        </div>
+        <div class="c5">
+            <div class="img4"><a href=""><i class="fa-regular fa-heart"></i></a></div>
+            <div class="price">price: $680</div>
+            <div class="Size">Free Size</div>
+            <button>Add to Cart</button>
+        </div>
+        <div class="c6">
+            <div class="img5"><a href=""><i class="fa-regular fa-heart"></i></a></div>
+            <div class="price">price: $550</div>
+            <div class="Size">Free Size</div>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</div>
+    <script>
+        function men(){
+            document.getElementsByClassName("box")[0].style.display="flex"
+            document.getElementsByClassName("box1")[0].style.display="none"
+            document.getElementsByClassName("box2")[0].style.display="none"
+        }
+        function men1(){
+            document.getElementsByClassName("box")[0].style.display="none"
+        }
+        function women(){
+            document.getElementsByClassName("box1")[0].style.display="flex"
+            document.getElementsByClassName("box")[0].style.display="none"
+            document.getElementsByClassName("box2")[0].style.display="none"
+        }
+        function women1(){
+            document.getElementsByClassName("box1")[0].style.display="none"
+        }
+        function kids(){
+            document.getElementsByClassName("box2")[0].style.display="flex"
+            document.getElementsByClassName("box")[0].style.display="none"
+            document.getElementsByClassName("box1")[0].style.display="none"
+        }
+        function kids1(){
+            document.getElementsByClassName("box2")[0].style.display="none"
+        }
+    </script>
+    <div class="sale">
+        <div>Up to 80% Off Clearance</div>
+        <a href=""><button class="btn4">Shop Now</button></a>
+    </div>
+    <div class="line"></div>
+    <div class="border">
+       <div class="border2">
+        <a href=" "  class="border1">Want 25% off your purchase? Refer A friend!</a>
+        <a href=" " class="border1">A gift that always fits. Shop E-Gift Card</a>
+       </div>
+    </div>
+    <div class="terms">
+       <div class="terms1">
+        <div class="cust">
+            <a href=" "  style="font-size: 20px; font-weight:900;">Customer Policies</a>
+            <a href=" ">Terms And Conditions Of Use</a>
+            <a href=" ">Offer Terms Ans Conditions</a>
+            <a href=" ">Shopping Policy</a>
+            <a href=" ">Returns Policy</a>
+            <a href=" ">Cancellation Policy</a>
+            <a href=" ">Payment Option</a>
+            <a href=" ">Privacy Policy</a>
+        </div>
+        <div class="cust">
+            <a href=" " style="font-size: 20px; font-weight:900;">Help</a>
+            <a href=" ">About AEO</a>
+            <a href=" ">AEO Blogs</a>
+            <a href=" ">Customer Support</a>
+            <a href=" ">Frequently Asled Questions</a>
+            <a href=" ">Track Order</a>
+            <a href=" ">Store Locator</a>
+            <a href=" ">site Map</a>
+        </div>
+        <div class="Keep">
+            <a href=" "  style="font-size: 20px; font-weight:900; color: black;">Keep in touch</a>
+            <div>Sign up for email and get insider access to exclusive offers, new arrivals, style tips and more </div>
+            <div class="keep1">
+                <div><input type="email" placeholder="Enter your email address"/></div>
+                <a href=" " class="keep2">SIGN UP</a>
+               
+        </div>
+        <div class="font">
+            <div class="insta"><i class="fa-brands fa-instagram"></i></div>
+            <div class="fb"><i class="fa-brands fa-facebook"></i></div>
+            <div class="yt"><i class="fa-brands fa-youtube"></i></div>
+        </div>
+        
+       </div>
+    </div>
+    </div>
+    <div class="line2"></div>
+</body>
+</html>
